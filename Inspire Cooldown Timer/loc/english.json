@@ -1,0 +1,10 @@
+{
+	"Inspire Cooldown TimerOptionsButtonTitleID" : "Inspire Cooldown Timer",
+	"Inspire Cooldown TimerOptionsButtonDescID" : "Inspire Cooldown Timer Options.",
+	"Inspire Cooldown TimerInspireTitleID" : "Inspire Cooldown Timer",
+	"Inspire Cooldown TimerInspireDescID" : "Displays a timer for the inspire cooldown.",
+	"Inspire Cooldown TimerTimerXTitleID" : "Horisontal Position",
+	"Inspire Cooldown TimerTimerXDescID" : "Change the horisontal position of the timer. \n The change will be visible next time the timer shows up on the screen.",
+	"Inspire Cooldown TimerTimerYTitleID" : "Vertical Position",
+	"Inspire Cooldown TimerTimerYDescID" : "Change the vertical position of the timer. \n The change will be visible next time the timer shows up on the screen."
+}
