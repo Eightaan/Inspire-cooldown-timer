@@ -1,5 +1,5 @@
 <mod name="Inspire Cooldown Timer" global_key="InspireCT" >
-	<AssetUpdates id="23117" provider="modworkshop" version="1.0"/>
+	<AssetUpdates id="23117" provider="modworkshop" version="1.1"/>
     <Hooks directory="lua">
         <hook file="InspireCooldownTimer.lua" source_file="lib/managers/playermanager"/>
         <hook file="InspireCooldownTimer.lua" source_file="lib/managers/hudmanagerpd2"/>
