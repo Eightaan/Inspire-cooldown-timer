@@ -1,10 +1,10 @@
 {
-	"Inspire Cooldown TimerOptionsButtonTitleID" : "Inspire Cooldown Timer",
-	"Inspire Cooldown TimerOptionsButtonDescID" : "Inspire Cooldown Timer Options.",
-	"Inspire Cooldown TimerInspireTitleID" : "Inspire Cooldown Timer",
-	"Inspire Cooldown TimerInspireDescID" : "Displays a timer for the inspire cooldown.",
-	"Inspire Cooldown TimerTimerXTitleID" : "Horisontal Position",
-	"Inspire Cooldown TimerTimerXDescID" : "Change the horisontal position of the timer.",
-	"Inspire Cooldown TimerTimerYTitleID" : "Vertical Position",
-	"Inspire Cooldown TimerTimerYDescID" : "Change the vertical position of the timer."
+	"ICTOptionsButtonTitleID" : "Inspire Cooldown Timer",
+	"ICTOptionsButtonDescID" : "Inspire Cooldown Timer Options.",
+	"ICTInspireTitleID" : "Inspire Cooldown Timer",
+	"ICTInspireDescID" : "Displays a timer for the inspire cooldown.",
+	"ICTTimerXTitleID" : "Horisontal Position",
+	"ICTTimerXDescID" : "Change the horisontal position of the timer.",
+	"ICTTimerYTitleID" : "Vertical Position",
+	"ICTTimerYDescID" : "Change the vertical position of the timer."
 }

@@ -1,5 +1,5 @@
 <mod name="Inspire Cooldown Timer" global_key="InspireCT" >
-	<AssetUpdates id="23117" provider="modworkshop" version="1.1"/>
+	<AssetUpdates id="23117" provider="modworkshop" version="1.2"/>
     <Hooks directory="lua">
         <hook file="InspireCooldownTimer.lua" source_file="lib/managers/playermanager"/>
         <hook file="InspireCooldownTimer.lua" source_file="lib/managers/hudmanagerpd2"/>
@@ -9,7 +9,7 @@
 		directory="loc" default="english.json">
     </Localization>
 
-	<Options name="Options" auto_build_menu="true" auto_load="true" save_file="InspireCTSave.json">
+	<Options prefix_id="ICT" save_file="InspireCTSave.json">
 	    <options>
 			<option type="bool" default_value="true" name="Inspire"/>
 			<option type="number" min="0" max="123" step="1" decimal_count="0" show_value="true" default_value="123" name="TimerX"/>
