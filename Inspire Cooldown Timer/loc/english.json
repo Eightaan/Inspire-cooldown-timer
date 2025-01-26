@@ -6,5 +6,7 @@
 	"ICTTimerXTitleID" : "Horisontal Position",
 	"ICTTimerXDescID" : "Change the horisontal position of the timer.",
 	"ICTTimerYTitleID" : "Vertical Position",
-	"ICTTimerYDescID" : "Change the vertical position of the timer."
+	"ICTTimerYDescID" : "Change the vertical position of the timer.",
+	"ICTTimerScaleTitleID" : "Scale",
+	"ICTTimerScaleDescID" : "Change the scale of the timer display."
 }

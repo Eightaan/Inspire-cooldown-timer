@@ -11,30 +11,17 @@ if RequiredScript == "lib/managers/hudmanagerpd2" then
 	function HUDBuffList:init()
 		if managers.hud ~= nil then 
 		    self.hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_FULLSCREEN_PD2)
-            self._cooldown_panel = self.hud.panel:panel({
-                name = "cooldown_panel",
-                x = 0,
-                y = 0
-            })
+			self._cooldown_panel = self.hud.panel:panel()
+
             self.cooldown_text = self._cooldown_panel:text({
                 layer = 2,
                 visible = false,
-                text = "",
-                font = tweak_data.hud.medium_font_noshadow,
-                font_size = 16,
-                x = 13,
-                y = 25,
-                color = Color.white
+                font = tweak_data.hud.medium_font_noshadow
             })
             self._inspire_cooldown_icon = self._cooldown_panel:bitmap({
                 name = "inspire_cooldown_icon",
                 texture = "guis/textures/pd2/skilltree_2/icons_atlas_2",
                 texture_rect = { 4 * 80, 9 * 80, 80, 80 },
-                w = 28,
-                h = 28,
-                x = 0,
-                y = 0,
-                color = Color.white,
                 visible = false,
                 layer = 1
             })
@@ -42,27 +29,35 @@ if RequiredScript == "lib/managers/hudmanagerpd2" then
                 name = "inspire_cooldown_timer_bg",
                 texture = "guis/textures/pd2/crimenet_marker_glow",
                 texture_rect = { 1, 1, 62, 62 }, 
-                w = 40,
-                h = 40,
-                x = 0,
-                y = 13,
                 color = Color("66ffff"),
-                visible = false,
-                layer = 0
+                visible = false
 			})
 		end
 	end
 	
 	function HUDBuffList:update_timer_visibility_and_position()
-        local inspire_visible = InspireCT.Options:GetValue("Inspire")
-        self.cooldown_text:set_visible(inspire_visible)
-        self._inspire_cooldown_timer_bg:set_visible(inspire_visible)
-        self._inspire_cooldown_icon:set_visible(inspire_visible)
-
+		local inspire_visible = InspireCT.Options:GetValue("Inspire")
+		local panel = self._cooldown_panel
+		local timer = self.cooldown_text
         local pos_x = 10 * (InspireCT.Options:GetValue("TimerX") or 0)
         local pos_y = 10 * (InspireCT.Options:GetValue("TimerY") or 0)
-        self._cooldown_panel:set_x(pos_x)
-        self._cooldown_panel:set_y(pos_y)
+		local inspire_timer_scale = (InspireCT.Options:GetValue("TimerScale") or 1)
+		
+		timer:set_visible(inspire_visible)
+		panel:child("inspire_cooldown_icon"):set_visible(inspire_visible)
+		panel:child("inspire_cooldown_timer_bg"):set_visible(inspire_visible)
+
+		panel:set_x(pos_x)
+		panel:set_y(pos_y)
+
+		timer:set_x(13 * inspire_timer_scale)
+		timer:set_y(25 * inspire_timer_scale)
+		timer:set_font_size(16 * inspire_timer_scale)
+		panel:child("inspire_cooldown_timer_bg"):set_w(40 * inspire_timer_scale)
+		panel:child("inspire_cooldown_timer_bg"):set_h(40 * inspire_timer_scale)
+		panel:child("inspire_cooldown_timer_bg"):set_y(13 * inspire_timer_scale)
+		panel:child("inspire_cooldown_icon"):set_w(28 * inspire_timer_scale)
+		panel:child("inspire_cooldown_icon"):set_h(28 * inspire_timer_scale)
     end
 
     function HUDBuffList:update_inspire_timer(duration)
